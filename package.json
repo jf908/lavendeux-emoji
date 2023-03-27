@@ -1,0 +1,19 @@
+{
+  "name": "lavendeux-emoji",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest",
+    "update:emoji": "node scripts/getEmoji.js"
+  },
+  "author": "jf908",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.2",
+    "vite": "^4.2.1",
+    "vitest": "^0.29.7"
+  }
+}
