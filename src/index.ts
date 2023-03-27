@@ -1,10 +1,10 @@
 declare module 'extension' {
   global {
-    function getEmoji(args: LavendeuxValue[]): LavendeuxValue;
+    function getEmoji(args: Lavendeux.Value[]): Lavendeux.Value;
   }
 }
 
-globalThis.extension = (): LavendeuxExtension => ({
+globalThis.extension = (): Lavendeux.Extension => ({
   name: 'emoji',
   author: 'jf908',
   version: __VERSION__,
@@ -13,7 +13,7 @@ globalThis.extension = (): LavendeuxExtension => ({
   },
 });
 
-function getStringValue(value: LavendeuxValue): string | undefined {
+function getStringValue(value: Lavendeux.Value): string | undefined {
   return 'String' in value
     ? value.String
     : 'Identifier' in value

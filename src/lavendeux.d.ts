@@ -1,27 +1,29 @@
-declare function extension(): LavendeuxExtension;
+declare function extension(): Lavendeux.Extension;
 
-type LavendeuxExtension = {
-  name: string;
-  author: string;
-  version: string;
-  functions?: Record<string, string>;
-  decorator?: Record<string, string>;
-};
+declare namespace Lavendeux {
+  type Extension = {
+    name: string;
+    author: string;
+    version: string;
+    functions?: Record<string, string>;
+    decorator?: Record<string, string>;
+  };
 
-type LavendeuxValue =
-  | { Boolean: boolean }
-  | {
-      Integer: number;
-    }
-  | {
-      Float: number;
-    }
-  | {
-      String: string;
-    }
-  | {
-      Identifier: string;
-    }
-  | {
-      Array: LavendeuxValue[];
-    };
+  type Value =
+    | { Boolean: boolean }
+    | {
+        Integer: number;
+      }
+    | {
+        Float: number;
+      }
+    | {
+        String: string;
+      }
+    | {
+        Identifier: string;
+      }
+    | {
+        Array: Lavendeux.Value[];
+      };
+}
