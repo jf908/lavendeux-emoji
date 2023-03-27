@@ -6,7 +6,7 @@ declare namespace Lavendeux {
     author: string;
     version: string;
     functions?: Record<string, string>;
-    decorator?: Record<string, string>;
+    decorators?: Record<string, string>;
   };
 
   type Value =
